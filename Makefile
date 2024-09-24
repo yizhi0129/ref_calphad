@@ -141,7 +141,8 @@ pmon6.o:	src/userif/pmon6.F90
 	# use -Dx11 for X11 plot drivers DEFAULT
 	# use -Dlixhlp for online help in Linux
 	# use -Dmachlp for online help in MacOS (browser)
-	$(FC) -c $(FCOPT) -Dx11 -Dlixhlp src/userif/pmon6.F90
+	# $(FC) -c $(FCOPT) -Dx11 -Dlixhlp src/userif/pmon6.F90
+	$(FC) -c $(FCOPT) -Dqtplt -Dlixhlp src/userif/pmon6.F90
 
 liboctq.o:	./examples//TQ4lib/Cpp/liboctq.F90
 	$(FC) -c -g $(FCOPT) ./examples/TQ4lib/Cpp/liboctq.F90
